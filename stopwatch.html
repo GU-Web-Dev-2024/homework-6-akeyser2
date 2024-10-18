@@ -26,6 +26,36 @@
                 'background': 'gray'
             });
 
+            $buttonStart.addClass('button-start').css({
+                'padding': '10px',
+                'margin': '10px',
+                'border-radius': '5px',
+                'background': 'lightgreen',
+                'color': 'white',
+                'border': 'none',
+                'cursor': 'pointer'
+            });
+
+            $buttonStop.addClass('button-stop').css({
+                'padding': '10px',
+                'margin': '10px',
+                'border-radius': '5px',
+                'background': 'lightcoral',
+                'color': 'white',
+                'border': 'none',
+                'cursor': 'pointer'
+            });
+
+            $buttonReset.addClass('button-reset').css({
+                'padding': '10px',
+                'margin': '10px',
+                'border-radius': '5px',
+                'background': 'lightblue',
+                'color': 'white',
+                'border': 'none',
+                'cursor': 'pointer'
+            });
+
             $buttonStart.on('click', function () {
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
