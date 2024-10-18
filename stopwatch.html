@@ -23,16 +23,18 @@
                 'border-radius': '5px',
                 'margin': '10px 0',
                 'text-align': 'center',
-                'background': 'lightgray'
+                'background': 'gray'
             });
 
             $buttonStart.on('click', function () {
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
+                $timer.css('background', 'lightgreen');
             });
 
             $buttonStop.on('click', function () {
                 clearInterval(interval);
+                $timer.css('background', 'lightcoral');
             });
 
             $buttonReset.on('click', function () {
@@ -41,6 +43,7 @@
                 seconds = "00";
                 $appendTens.html(tens);
                 $appendSeconds.html(seconds);
+                $timer.css('background', 'gray');
             });
 
             function startTimer() {
