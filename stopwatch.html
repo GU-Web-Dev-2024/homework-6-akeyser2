@@ -55,6 +55,14 @@
             100% { opacity: 0.8; }
         }
 
+        .button-container {
+            display: flex;
+            gap: 10px; 
+            justify-content: center; /* Centers buttons horizontally */
+            align-items: center; /* Centers buttons vertically */
+        }
+
+
         .running {
             animation: opacityAnimation 1s infinite;
         }
@@ -70,6 +78,20 @@
             var $buttonReset = $('#button-reset');
             var $timer = $('#timer');
             var interval;
+
+            // Apply initial styles using jQuery
+            $('.wrapper').css({
+                'border': '5px solid black',
+                'padding': '20px',
+                'border-radius': '10px',
+                'background-color': '#f0f0f0'
+            });
+
+            $('#timer').css({
+                'font-size': '2em',
+                'color': '#333',
+                'font-weight': 'bold'
+            });
 
             $timer.addClass('timer-background');
 
@@ -128,9 +150,11 @@
         <h1>Stopwatch</h1>
         <h2>Vanilla JavaScript Stopwatch</h2>
         <p id="timer"><span id="seconds">00</span>:<span id="tens">00</span></p>
-        <button id="button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
+        <div class="button-container">
+            <button id="button-start">Start</button>
+            <button id="button-stop">Stop</button>
+            <button id="button-reset">Reset</button>
+        </div>
     </div>
 </body>
 
