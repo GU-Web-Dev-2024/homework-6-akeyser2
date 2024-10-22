@@ -12,21 +12,11 @@ CPSC 332 | HW6 - JQuery
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW6 - JQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'starlight';
-            src: url('//2ttf.com/webfont/EwSb4KEtWKK/webfont.ttf') format('truetype');
-        }
 
-        * {
-            font-family: 'starlight';
-        }
-
-        .wrapper {
-            /* background-image: url('vm.png');
-            background-size: cover; */
-            text-align: center;
-        }
 
         .timer-background {
             padding: 10px;
@@ -46,6 +36,7 @@ CPSC 332 | HW6 - JQuery
             cursor: pointer;
         }
 
+        /* these color sections are just for reference */
         .button-start {
             background: lightgreen;
             border-color: forestgreen
@@ -91,12 +82,27 @@ CPSC 332 | HW6 - JQuery
             var $timer = $('#timer');
             var interval;
 
+            $('*').css({
+                'font-family': '"Black Ops One", system-ui',
+                'font-weight': '400',
+                'font-style': 'normal'
+            })
             // Apply initial styles using jQuery
             $('.wrapper').css({
+                'background-image': 'url("https://media1.tenor.com/m/Lk4I0xlYMgEAAAAd/freddy-fazbear-fnaf.gif")',
+                'background-size': 'cover',
+                'height': '40vh',
                 'border': '5px solid black',
                 'padding': '20px',
                 'border-radius': '10px',
-                'background-color': '#f0f0f0'
+                'background-color': '#f0f0f0',
+                'text-align': 'center'
+            }); // Add missing semicolon here
+
+            $('.wrapper h1, .wrapper h2').css({
+                'background': 'linear-gradient(oklab(87.4% -0.037 0.023), oklab(54.6% -0.038 0.025))',
+                '-webkit-background-clip': 'text',
+                '-webkit-text-fill-color': 'transparent'
             });
 
             $('#timer').css({
