@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW6 - JQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'starlight';
+            src: url('//2ttf.com/webfont/EwSb4KEtWKK/webfont.ttf') format('truetype');
+        }
+
+        * {
+            font-family: 'starlight';
+        }
+
+        .timer-background {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+            background: gray;
+        }
+
+        .button-start, .button-stop, .button-reset {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-start {
+            background: lightgreen;
+        }
+
+        .button-stop {
+            background: lightcoral;
+        }
+
+        .button-reset {
+            background: lightblue;
+        }
+    </style>
     <script>
         $(document).ready(function () {
             var seconds = "00";
@@ -18,43 +57,11 @@
             var $timer = $('#timer');
             var interval;
 
-            $timer.addClass('timer-background').css({
-                'padding': '10px',
-                'border-radius': '5px',
-                'margin': '10px 0',
-                'text-align': 'center',
-                'background': 'gray'
-            });
+            $timer.addClass('timer-background');
 
-            $buttonStart.addClass('button-start').css({
-                'padding': '10px',
-                'margin': '10px',
-                'border-radius': '5px',
-                'background': 'lightgreen',
-                'color': 'white',
-                'border': 'none',
-                'cursor': 'pointer'
-            });
-
-            $buttonStop.addClass('button-stop').css({
-                'padding': '10px',
-                'margin': '10px',
-                'border-radius': '5px',
-                'background': 'lightcoral',
-                'color': 'white',
-                'border': 'none',
-                'cursor': 'pointer'
-            });
-
-            $buttonReset.addClass('button-reset').css({
-                'padding': '10px',
-                'margin': '10px',
-                'border-radius': '5px',
-                'background': 'lightblue',
-                'color': 'white',
-                'border': 'none',
-                'cursor': 'pointer'
-            });
+            $buttonStart.addClass('button-start');
+            $buttonStop.addClass('button-stop');
+            $buttonReset.addClass('button-reset');
 
             $buttonStart.on('click', function () {
                 clearInterval(interval);
